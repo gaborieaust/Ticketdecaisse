@@ -17,6 +17,11 @@ public class Main {
 
         // on déclare le nombre d'éléments à facturer
         System.out.println("Quel est le nombre d'éléments à facturer ? ");
+        while (sc.hasNextInt() == false) {
+            System.out.println("Vous devez saisir un chiffre entier!!! ");
+            System.out.println("Quel est le nombre d'éléments à facturer ? ");
+            sc.nextLine();
+        }
         int n = sc.nextInt();
         sc.nextLine();
         //if (n instanceof int) {System.out.println("Ok");}
@@ -154,6 +159,7 @@ public class Main {
         System.out.println("+------------+----------------+----------------+----------------+");
         System.out.printf("| Soit un montant total de                          %.2f \n", prixtotal);
         System.out.println("+------------+----------------+----------------+----------------+");
+        System.out.printf("%tF %<tT\n", now);
         // On verifi
         //if (age <= 0) {
         //   System.out.println("Vous n'êtes pas encore né ? Hum, bizarre...");
