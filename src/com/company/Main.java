@@ -1,4 +1,5 @@
 package com.company;
+
 import java.awt.*;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -16,8 +17,10 @@ public class Main {
 
         // on déclare le nombre d'éléments à facturer
         System.out.println("Quel est le nombre d'éléments à facturer ? ");
-        int n = sc.nextInt();
+        int n = sc.nextInt(); sc.hasNextInt()
         sc.nextLine();
+        //if (n instanceof int) {System.out.println("Ok");}
+        // else {System.out.println("Not Ok");}
 
         // On affiche un message pour demander le descriptif
         // System.out.println("Quel plat a été commandé  259 ? ");
@@ -55,15 +58,15 @@ public class Main {
         String tableau[] = new String[n];
         tableau = new String[n];
         //String plat ="";
-        String Totalligne ;
-        float prixtotal = 0 ;
+        String Totalligne;
+        float prixtotal = 0;
         int f = 0;
         float prixplat;
         int quant;
         String plat;
-        ArrayList<String> maListe=new ArrayList<String>();
-        ArrayList<Float> maListeprix=new ArrayList<Float>();
-        ArrayList<Integer> maListeqte=new ArrayList<Integer>();
+        ArrayList<String> maListe = new ArrayList<String>();
+        ArrayList<Float> maListeprix = new ArrayList<Float>();
+        ArrayList<Integer> maListeqte = new ArrayList<Integer>();
 
 
         while (i < n) {
@@ -99,18 +102,18 @@ public class Main {
             prixtotal = prixtotal + prixplat;
 
             // On affiche le résultat
-            System.out.println("Le prix pour le  " + plat + " est de " + prixplat );
+            System.out.println("Le prix pour le  " + plat + " est de " + prixplat);
             i++;
         }
-            //On vérifie si c'est le dernier plat
-            //System.out.println("Avez-vous d'autres plats à déclarer (1 pour Oui ; 0 pour Non? ");
-            // On récupère la réponse
-            //rep = sc.nextLine().charAt(0);
-            //sc.nextLine();
+        //On vérifie si c'est le dernier plat
+        //System.out.println("Avez-vous d'autres plats à déclarer (1 pour Oui ; 0 pour Non? ");
+        // On récupère la réponse
+        //rep = sc.nextLine().charAt(0);
+        //sc.nextLine();
 
         // je vais venir énumérer les données qui ont été sauvegardées dans le tableau / lecture basique du tableau
         //for (i = 0; i < tableau.length; i++) {
-            //System.out.println(tableau[i]);
+        //System.out.println(tableau[i]);
 
         // j'affiche le résultat de ma liste
 
@@ -119,49 +122,49 @@ public class Main {
         System.out.println("*********************************");
         System.out.println("");
 
-        System.out.println("Descriptif"+" / "+ "Prix unitaire" + " / "+ "Quantité");
+        System.out.println("Descriptif" + " / " + "Prix unitaire" + " / " + "Quantité");
 
         //+maListe+'\n' +maListeprix+'\n'+ maListeqte+'\n' );
 
-       //for( int s = 0 ; s < maListeprix.size(); s++)
-           // System.out.println(maListeprix.get(s) & System.out.println(maListeqte.get(s);
+        //for( int s = 0 ; s < maListeprix.size(); s++)
+        // System.out.println(maListeprix.get(s) & System.out.println(maListeqte.get(s);
 
-           //System.out.println(maListeqte.get());
+        //System.out.println(maListeqte.get());
         //System.out.println(maListeprix );
         //System.out.println(maListeqte);
         Date now = new Date();
-        for( i = 0 ; i < n; i++){
-            System.out.println((  maListe.get(i).toUpperCase() + " / " + maListeprix.get(i) + " / " + maListeqte.get(i)+" soit un total de " +(maListeprix.get(i) * (maListeqte.get(i)))));
+        for (i = 0; i < n; i++) {
+            System.out.println((maListe.get(i).toUpperCase() + " / " + maListeprix.get(i) + " / " + maListeqte.get(i) + " soit un total de " + (maListeprix.get(i) * (maListeqte.get(i)))));
             //System.out.println(maListe.get(i) ' + ' System.out.println(maListeprix.get(i)));
-           //System.out.println(maListeprix.get(i));
+            //System.out.println(maListeprix.get(i));
             //System.out.println(maListeqte.get(i));
-            }
+        }
         // affichage du prix final
-        System.out.println("Soit un montant total à payer de " +prixtotal);
-        System.out.printf( "%tF %<tT\n", now );
+        System.out.println("Soit un montant total à payer de " + prixtotal);
+        System.out.printf("%tF %<tT\n", now);
 
-        System.out.println( "+------------+----------------+----------------+----------------+" );
-        System.out.println( "| Descriptif | Quantité       | Prix uni       |   Prix total   " );
-        System.out.println( "+------------+----------------+----------------+----------------+" );
-        for( i = 0 ; i < n; i++) {
+        System.out.println("+------------+----------------+----------------+----------------+");
+        System.out.println("| Descriptif | Quantité       | Prix uni       |   Prix total   ");
+        System.out.println("+------------+----------------+----------------+----------------+");
+        for (i = 0; i < n; i++) {
             System.out.printf("| %10s |  %10d    | %12.2f   | %12.2f   |\n",
-                    maListe.get(i).toUpperCase(), maListeqte.get(i), maListeprix.get(i),(maListeqte.get(i)*maListeprix.get(i)));
+                    maListe.get(i).toUpperCase(), maListeqte.get(i), maListeprix.get(i), (maListeqte.get(i) * maListeprix.get(i)));
         }
-            System.out.println( "+------------+----------------+----------------+----------------+" );
-        System.out.println( "+------------+----------------+----------------+----------------+" );
-        System.out.printf( "| Soit un montant total de                          %.2f \n", prixtotal );
-        System.out.println( "+------------+----------------+----------------+----------------+" );
-            // On verifi
-            //if (age <= 0) {
-            //   System.out.println("Vous n'êtes pas encore né ? Hum, bizarre...");
-            //} else {
-            // On affiche le résultat
-            //   System.out.println("Bonjour " + prenom + ". Vous avez " + age + " ans, c'est bien ça ?");
-            //ro }
+        System.out.println("+------------+----------------+----------------+----------------+");
+        System.out.println("+------------+----------------+----------------+----------------+");
+        System.out.printf("| Soit un montant total de                          %.2f \n", prixtotal);
+        System.out.println("+------------+----------------+----------------+----------------+");
+        // On verifi
+        //if (age <= 0) {
+        //   System.out.println("Vous n'êtes pas encore né ? Hum, bizarre...");
+        //} else {
+        // On affiche le résultat
+        //   System.out.println("Bonjour " + prenom + ". Vous avez " + age + " ans, c'est bien ça ?");
+        //ro }
 
-            // On ferme le scanner
-            sc.close();
-        }
-
+        // On ferme le scanner
+        sc.close();
     }
+
+}
 
