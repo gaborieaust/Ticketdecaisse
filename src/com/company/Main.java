@@ -140,6 +140,7 @@ public class Main {
         System.out.println("Descriptif" + " / " + "Prix unitaire" + " / " + "Quantité");
 
         //+maListe+'\n' +maListeprix+'\n'+ maListeqte+'\n' );
+        //jjj
 
         //for( int s = 0 ; s < maListeprix.size(); s++)
         // System.out.println(maListeprix.get(s) & System.out.println(maListeqte.get(s);
