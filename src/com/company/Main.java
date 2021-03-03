@@ -1,7 +1,12 @@
 package com.company;
+import java.awt.*;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Scanner;
+import java.awt.Color;
+
+
 public class Main {
 
     public static void main(String[] args) {
@@ -51,7 +56,7 @@ public class Main {
         tableau = new String[n];
         //String plat ="";
         String Totalligne ;
-        float prixtotal = 0;
+        float prixtotal = 0 ;
         int f = 0;
         float prixplat;
         int quant;
@@ -108,7 +113,14 @@ public class Main {
             //System.out.println(tableau[i]);
 
         // j'affiche le résultat de ma liste
-        System.out.println("*******************recapitaltif de la facture********************\n" );
+
+        System.out.println("*********************************");
+        System.out.println("*recapitaltif de la facture*");
+        System.out.println("*********************************");
+        System.out.println("");
+
+        System.out.println("Descriptif"+" / "+ "Prix unitaire" + " / "+ "Quantité");
+
         //+maListe+'\n' +maListeprix+'\n'+ maListeqte+'\n' );
 
        //for( int s = 0 ; s < maListeprix.size(); s++)
@@ -117,15 +129,28 @@ public class Main {
            //System.out.println(maListeqte.get());
         //System.out.println(maListeprix );
         //System.out.println(maListeqte);
+        Date now = new Date();
         for( i = 0 ; i < n; i++){
-            System.out.println((  maListe.get(i) + " " + maListeprix.get(i) + " " + maListeqte.get(i) ));
+            System.out.println((  maListe.get(i).toUpperCase() + " / " + maListeprix.get(i) + " / " + maListeqte.get(i)+" soit un total de " +(maListeprix.get(i) * (maListeqte.get(i)))));
             //System.out.println(maListe.get(i) ' + ' System.out.println(maListeprix.get(i)));
            //System.out.println(maListeprix.get(i));
             //System.out.println(maListeqte.get(i));
             }
         // affichage du prix final
-        System.out.println(" Soit un montant total à payer de " + prixtotal);
+        System.out.println("Soit un montant total à payer de " +prixtotal);
+        System.out.printf( "%tF %<tT\n", now );
 
+        System.out.println( "+------------+----------------+----------------+----------------+" );
+        System.out.println( "| Descriptif | Quantité       | Prix uni       |   Prix total   " );
+        System.out.println( "+------------+----------------+----------------+----------------+" );
+        for( i = 0 ; i < n; i++) {
+            System.out.printf("| %10s |  %10d    | %12.2f   | %12.2f   |\n",
+                    maListe.get(i).toUpperCase(), maListeqte.get(i), maListeprix.get(i),(maListeqte.get(i)*maListeprix.get(i)));
+        }
+            System.out.println( "+------------+----------------+----------------+----------------+" );
+        System.out.println( "+------------+----------------+----------------+----------------+" );
+        System.out.printf( "| Soit un montant total de                          %.2f \n", prixtotal );
+        System.out.println( "+------------+----------------+----------------+----------------+" );
             // On verifi
             //if (age <= 0) {
             //   System.out.println("Vous n'êtes pas encore né ? Hum, bizarre...");
