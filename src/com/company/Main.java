@@ -17,7 +17,7 @@ public class Main {
 
         // on déclare le nombre d'éléments à facturer
         System.out.println("Quel est le nombre d'éléments à facturer ? ");
-        int n = sc.nextInt(); sc.hasNextInt()
+        int n = sc.nextInt();
         sc.nextLine();
         //if (n instanceof int) {System.out.println("Ok");}
         // else {System.out.println("Not Ok");}
