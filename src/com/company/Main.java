@@ -90,6 +90,11 @@ public class Main {
 
             // On demande le prix unitaire
             System.out.println("Quel est le prix unitaire du plat ? ");
+            while (sc.hasNextFloat() == false) {
+                System.out.println("Vous devez saisir un chiffre!!! ");
+                System.out.println("Quel est le prix unitaire du plat ? ");
+                sc.nextLine();
+            }
             Float pxunit = sc.nextFloat();
             sc.nextLine();
             maListeprix.add(pxunit);
@@ -97,6 +102,11 @@ public class Main {
 
             // On demande la quantité
             System.out.println("Quelle est la quantité ? ");
+            while (sc.hasNextInt() == false) {
+                System.out.println("Vous devez saisir un chiffre entier!!! ");
+                System.out.println("Quel est le prix unitaire du plat ? ");
+                sc.nextLine();
+            }
             quant = sc.nextInt();
             sc.nextLine();
             //on vient stocker dans une liste
